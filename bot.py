@@ -48,6 +48,7 @@ doriler = {
     "SPECTRA HERBROM": "200,000 so'm",
     "VINORAL": "155,000 so'm",
 }
+
 kategoriyalar = {
     "💉 Vaktsinalar": ["Vaksimune AI Multi H5+H9","Vaksimune NDL H9","Vaksimune ND L Multi IBPlus EDS","Vaksimune IBD MHV","VAKSIMUNE ND CLONE","VAKSIMUNE ND LS","Vaksimune NDLS IB","VAKSIMUNE IBD M+","Vaksimune ND L Inaktif 1000doz","VAKSIMUNE ND BAN/AF","Vaksimune ND L Inaktif 5000doz","VAKSIMUNE IB QX","VAKSIMUNE IB NV-1","VAKSIMUNE IB H120"],
     "💊 Antibiotiklar": ["Respiroflor-O 300","Eksakon","Tilobag","Tilmikofors-O","Megluflor","Amoksibag","Medquinol 10%","MEDICOL","AMOXYMED 90%","MEDSULTAN","SPECTRA TYLODOX 200","SPECRTIL PLUS"],
@@ -105,8 +106,7 @@ def callback(call):
         dori = call.data[5:]
         narx = doriler.get(dori, "Noma'lum")
         bot.send_message(call.message.chat.id, f"💊 {dori}\n💰 Narx: {narx}")
-
-elif call.data == "help":
+    elif call.data == "help":
         markup = InlineKeyboardMarkup()
         markup.add(InlineKeyboardButton("📞 Ergashev Akbarjon", url="tel:+998916223520"))
         markup.add(InlineKeyboardButton("📞 Axmadaliyev Nurmuhammad", url="tel:+998999449803"))
@@ -115,5 +115,7 @@ elif call.data == "help":
     elif call.data == "sales":
         markup = InlineKeyboardMarkup()
         markup.add(InlineKeyboardButton("📞 +998 90 932 97 71", url="tel:+998909329771"))
-        markup.add(InlineKeyboardButton("📞 
+        markup.add(InlineKeyboardButton("📞 +998 95 390 39 36", url="tel:+998953903936"))
+        bot.send_message(call.message.chat.id, "🏪 Rasmiy Distribyuter - SAVDO BO'LIMI\n\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36\n📍 Toshkent, Choshtеpa ko'chasi, 38/40", reply_markup=markup)
+
 bot.infinity_polling()
