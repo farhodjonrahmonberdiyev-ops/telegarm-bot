@@ -106,7 +106,7 @@ def callback(call):
         narx = doriler.get(dori, "Noma'lum")
         bot.send_message(call.message.chat.id, f"💊 {dori}\n💰 Narx: {narx}")
 
-bot.infinity_polling()elif call.data == "help":
+elif call.data == "help":
         markup = InlineKeyboardMarkup()
         markup.add(InlineKeyboardButton("📞 Ergashev Akbarjon", url="tel:+998916223520"))
         markup.add(InlineKeyboardButton("📞 Axmadaliyev Nurmuhammad", url="tel:+998999449803"))
@@ -116,3 +116,4 @@ bot.infinity_polling()elif call.data == "help":
         markup = InlineKeyboardMarkup()
         markup.add(InlineKeyboardButton("📞 +998 90 932 97 71", url="tel:+998909329771"))
         markup.add(InlineKeyboardButton("📞 
+bot.infinity_polling()
