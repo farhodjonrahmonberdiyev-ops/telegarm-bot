@@ -59,6 +59,8 @@ def kategoriya_menyu():
     markup = InlineKeyboardMarkup()
     for kat in kategoriyalar:
         markup.add(InlineKeyboardButton(kat, callback_data=f"kat_{kat}"))
+    markup.add(InlineKeyboardButton("🩺 Mutaxassis", callback_data="help"))
+    markup.add(InlineKeyboardButton("🏪 Savdo bo'limi", callback_data="sales"))
     return markup
 
 def dori_menyu(kat):
@@ -67,8 +69,7 @@ def dori_menyu(kat):
         markup.add(InlineKeyboardButton(dori, callback_data=f"dori_{dori}"))
     markup.add(InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga"))
     return markup
-
-@bot.message_handler(commands=['start'])
+    @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id, "Salom! 👋 RIVIERA DIAMOND ga xush kelibsiz!\n\nKategoriyani tanlang 👇", reply_markup=kategoriya_menyu())
 
@@ -76,26 +77,22 @@ def start(message):
 def dori_list(message):
     bot.send_message(message.chat.id, "Kategoriyani tanlang 👇", reply_markup=kategoriya_menyu())
 
-@bot.message_handler(commands=['help'])
-def help_cmd(message):
-    markup = InlineKeyboardMarkup()
-    markup.add(InlineKeyboardButton("📞 Ergashev Akbarjon", url="tel:+998916223520"))
-    markup.add(InlineKeyboardButton("📞 Axmadaliyev Nurmuhammad", url="tel:+998999449803"))
-    markup.add(InlineKeyboardButton("📞 Xomitjonov Ulugbek", url="tel:+998932466069"))
-    bot.send_message(message.chat.id, "🩺 Veterinar mutaxassislar:\n\n👨‍⚕️ Ergashev Akbarjon: +998 91 622 35 20\n👨‍⚕️ Axmadaliyev Nurmuhammad: +998 99 944 98 03\n👨 Xomitjonov Ulugbek: +998 93 246 60 69", reply_markup=markup)
-
-@bot.message_handler(commands=['sales'])
-def sales(message):
-    markup = InlineKeyboardMarkup()
-    markup.add(InlineKeyboardButton("📞 +998 90 932 97 71", url="tel:+998909329771"))
-    markup.add(InlineKeyboardButton("📞 +998 95 390 39 36", url="tel:+998953903936"))
-    bot.send_message(message.chat.id, "🏪 Rasmiy Distribyuter - SAVDO BO'LIMI\n\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36\n📍 Toshkent, Choshtеpa ko'chasi, 38/40", reply_markup=markup)
-
 @bot.callback_query_handler(func=lambda call: True)
 def callback(call):
     bot.answer_callback_query(call.id)
     if call.data == "orqaga":
         bot.send_message(call.message.chat.id, "Kategoriyani tanlang 👇", reply_markup=kategoriya_menyu())
+    elif call.data == "help":
+        markup = InlineKeyboardMarkup()
+        markup.add(InlineKeyboardButton("📞 Ergashev Akbarjon", url="tel:+998916223520"))
+        markup.add(InlineKeyboardButton("📞 Axmadaliyev Nurmuhammad", url="tel:+998999449803"))
+        markup.add(InlineKeyboardButton("📞 Xomitjonov Ulugbek", url="tel:+998932466069"))
+        bot.send_message(call.message.chat.id, "🩺 Veterinar mutaxassislar:\n\n👨‍⚕️ Ergashev Akbarjon: +998 91 622 35 20\n👨‍⚕️ Axmadaliyev Nurmuhammad: +998 99 944 98 03\n👨‍⚕️ Xomitjonov Ulugbek: +998 93 246 60 69", reply_markup=markup)
+    elif call.data == "sales":
+        markup = InlineKeyboardMarkup()
+        markup.add(InlineKeyboardButton("📞 +998 90 932 97 71", url="tel:+998909329771"))
+        markup.add(InlineKeyboardButton("📞 +998 95 390 39 36", url="tel:+998953903936"))
+        bot.send_message(call.message.chat.id, "🏪 Rasmiy Distribyuter - SAVDO BO'LIMI\n\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36\n📍 Toshkent, Choshtеpa ko'chasi, 38/40", reply_markup=markup)
     elif call.data.startswith("kat_"):
         kat = call.data[4:]
         bot.send_message(call.message.chat.id, f"{kat} - dori tanlang 👇", reply_markup=dori_menyu(kat))
