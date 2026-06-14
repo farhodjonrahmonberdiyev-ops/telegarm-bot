@@ -47,7 +47,8 @@ doriler = {
     "SPECRTIL PLUS": "TEZ KUNDA",
     "SPECTRA HERBROM": "200,000 so'm",
     "VINORAL": "155,000 so'm",
-}kategoriyalar = {
+}
+kategoriyalar = {
     "💉 Vaktsinalar": ["Vaksimune AI Multi H5+H9","Vaksimune NDL H9","Vaksimune ND L Multi IBPlus EDS","Vaksimune IBD MHV","VAKSIMUNE ND CLONE","VAKSIMUNE ND LS","Vaksimune NDLS IB","VAKSIMUNE IBD M+","Vaksimune ND L Inaktif 1000doz","VAKSIMUNE ND BAN/AF","Vaksimune ND L Inaktif 5000doz","VAKSIMUNE IB QX","VAKSIMUNE IB NV-1","VAKSIMUNE IB H120"],
     "💊 Antibiotiklar": ["Respiroflor-O 300","Eksakon","Tilobag","Tilmikofors-O","Megluflor","Amoksibag","Medquinol 10%","MEDICOL","AMOXYMED 90%","MEDSULTAN","SPECTRA TYLODOX 200","SPECRTIL PLUS"],
     "🌿 Vitaminlar": ["ФЛОРАБАЛАНС 500гр","Fosfozal","Immunair","HepaVital","SUPERVIT FORTE","B-Complex FORTE","E-SELEN PLUS FORTE","AD3E+C FORTE","VINORAL"],
