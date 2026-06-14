@@ -69,6 +69,8 @@ def dori_menyu(kat):
         markup.add(InlineKeyboardButton(dori, callback_data=f"dori_{dori}"))
     markup.add(InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga"))
     return markup
+
+    
     @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id, "Salom! 👋 RIVIERA DIAMOND ga xush kelibsiz!\n\nKategoriyani tanlang 👇", reply_markup=kategoriya_menyu())
