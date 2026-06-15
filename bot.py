@@ -11,8 +11,8 @@ def km():
     m=InlineKeyboardMarkup()
     for k in kategoriyalar:
         m.add(InlineKeyboardButton(k,callback_data=f"k_{k}"))
-    m.add(InlineKeyboardButton("🩺 Mutaxassis",callback_data="d_help"))
-    m.add(InlineKeyboardButton("🏪 Savdo bolimi",callback_data="d_sales"))
+    m.add(InlineKeyboardButton("🩺 Mutaxassis",callback_data="help_btn"))
+    m.add(InlineKeyboardButton("🏪 Savdo bolimi",callback_data="sales_btn"))
     return m
 
 def dm(k):
@@ -32,13 +32,13 @@ def cb(call):
     d=call.data
     if d=="orqaga":
         bot.send_message(call.message.chat.id,"Kategoriyani tanlang 👇",reply_markup=km())
-    elif d=="d_help":
+    elif d=="help_btn":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 Ergashev Akbarjon",url="tel:+998916223520"))
         m.add(InlineKeyboardButton("📞 Axmadaliyev Nurmuhammad",url="tel:+998999449803"))
         m.add(InlineKeyboardButton("📞 Xomitjonov Ulugbek",url="tel:+998932466069"))
         bot.send_message(call.message.chat.id,"🩺 Veterinar mutaxassislar:",reply_markup=m)
-    elif d=="d_sales":
+    elif d=="sales_btn":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 +998 90 932 97 71",url="tel:+998909329771"))
         m.add(InlineKeyboardButton("📞 +998 95 390 39 36",url="tel:+998953903936"))
