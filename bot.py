@@ -23,9 +23,9 @@ def dm(lst):
     return m
 def mutaxassis_menyu():
     m=InlineKeyboardMarkup()
-    m.add(InlineKeyboardButton("👨‍⚕️ Ergashev Akbarjon",callback_data="M1"))
-    m.add(InlineKeyboardButton("👨‍⚕️ Axmadaliyev Nurmuhammad",callback_data="M2"))
-    m.add(InlineKeyboardButton("👨‍⚕️ Xomitjonov Ulugbek",callback_data="M3"))
+    m.add(InlineKeyboardButton("👨‍⚕️ Ergashev Akbarjon 916223520",callback_data="M1"))
+    m.add(InlineKeyboardButton("👨‍⚕️ Axmadaliyev Nurmuhammad 999449803",callback_data="M2"))
+    m.add(InlineKeyboardButton("👨‍⚕️ Xomitjonov Ulugbek 932466069",callback_data="M3"))
     m.add(InlineKeyboardButton("🔙 Orqaga",callback_data="BACK"))
     return m
 @bot.message_handler(commands=['start','list'])
@@ -53,7 +53,7 @@ def cb(call):
         bot.send_message(call.message.chat.id,"👨‍⚕️ Xomitjonov Ulugbek\n📞 +998 93 246 60 69",reply_markup=m)
     elif d=="SALES":
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("👤 Otabek Duschanovich",callback_data="OTABEK"))
+        m.add(InlineKeyboardButton("👤 Otabek Duschanovich 909329771",callback_data="OTABEK"))
         bot.send_message(call.message.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
     elif d=="OTABEK":
         m=InlineKeyboardMarkup()
