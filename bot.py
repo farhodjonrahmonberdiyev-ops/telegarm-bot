@@ -54,12 +54,12 @@ def cb(call):
     elif d=="SALES":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("👤 Otabek Duschanovich",callback_data="OTABEK"))
-        bot.send_message(call.message.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
+        bot.send_message(msg.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
     elif d=="OTABEK":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 +998 90 932 97 71 | Aloqdamiz!",url="tel:+998909329771"))
         m.add(InlineKeyboardButton("📞 +998 95 390 39 36 | Aloqdamiz!",url="tel:+998953903936"))
-        bot.send_message(msg.chat.id,"👤 Otabek Duschanovich\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36",reply_markup=m)
+        bot.send_message(call.message.chat.id,"👤 Otabek Duschanovich\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36",reply_markup=m)
     elif d=="VAK":
         bot.send_message(call.message.chat.id,"Vaktsinalar:",reply_markup=dm(vak))
     elif d=="ANT":
