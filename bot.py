@@ -23,9 +23,9 @@ def dm(lst):
     return m
 def mutaxassis_menyu():
     m=InlineKeyboardMarkup()
-    m.add(InlineKeyboardButton("👨‍⚕️ Ergashev Akbarjon 916223520",callback_data="M1"))
-    m.add(InlineKeyboardButton("👨‍⚕️ Axmadaliyev Nurmuhammad 999449803",callback_data="M2"))
-    m.add(InlineKeyboardButton("👨‍⚕️ Xomitjonov Ulugbek 932466069",callback_data="M3"))
+    m.add(InlineKeyboardButton("👨‍⚕️ Ergashev Akbarjon",callback_data="M1"))
+    m.add(InlineKeyboardButton("👨‍⚕️ Axmadaliyev Nurmuhammad",callback_data="M2"))
+    m.add(InlineKeyboardButton("👨‍⚕️ Xomitjonov Ulugbek",callback_data="M3"))
     m.add(InlineKeyboardButton("🔙 Orqaga",callback_data="BACK"))
     return m
 @bot.message_handler(commands=['start','list'])
@@ -42,24 +42,24 @@ def cb(call):
     elif d=="M1":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 Qongiroq qiling | Aloqdamiz!",url="tel:+998916223520"))
-        bot.send_message(call.message.chat.id,"👨‍ Ergashev Akbarjon\n📞 +998 91 622 35 20",reply_markup=m)
+        bot.send_message(msg.chat.id,"👨‍ Ergashev Akbarjon\n📞 +998 91 622 35 20",reply_markup=m)
     elif d=="M2":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 Qongiroq qiling | Aloqdamiz!",url="tel:+998999449803"))
-        bot.send_message(call.message.chat.id,"👨‍⚕️ Axmadaliyev Nurmuhammad\n📞 +998 99 944 98 03",reply_markup=m)
+        bot.send_message(msg.chat.id,"👨‍⚕️ Axmadaliyev Nurmuhammad\n📞 +998 99 944 98 03",reply_markup=m)
     elif d=="M3":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 Qongiroq qiling | Aloqdamiz!",url="tel:+998932466069"))
-        bot.send_message(call.message.chat.id,"👨‍⚕️ Xomitjonov Ulugbek\n📞 +998 93 246 60 69",reply_markup=m)
+        bot.send_message(msg.chat.id,"👨‍⚕️ Xomitjonov Ulugbek\n📞 +998 93 246 60 69",reply_markup=m)
     elif d=="SALES":
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("👤 Otabek Duschanovich 909329771",callback_data="OTABEK"))
+        m.add(InlineKeyboardButton("👤 Otabek Duschanovich",callback_data="OTABEK"))
         bot.send_message(call.message.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
     elif d=="OTABEK":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 +998 90 932 97 71 | Aloqdamiz!",url="tel:+998909329771"))
         m.add(InlineKeyboardButton("📞 +998 95 390 39 36 | Aloqdamiz!",url="tel:+998953903936"))
-        bot.send_message(call.message.chat.id,"👤 Otabek Duschanovich\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36",reply_markup=m)
+        bot.send_message(msg.chat.id,"👤 Otabek Duschanovich\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36",reply_markup=m)
     elif d=="VAK":
         bot.send_message(call.message.chat.id,"Vaktsinalar:",reply_markup=dm(vak))
     elif d=="ANT":
