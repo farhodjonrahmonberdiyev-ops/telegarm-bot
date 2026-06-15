@@ -41,25 +41,24 @@ def cb(call):
         bot.send_message(call.message.chat.id,"🩺 Mutaxassisni tanlang:",reply_markup=mutaxassis_menyu())
     elif d=="M1":
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("📞 Qongiroq qilish",url="tel:+998916223520"))
-        bot.send_message(msg.chat.id,"👨‍⚕️ Ergashev Akbarjon\n📞 +998 91 622 35 20",reply_markup=m)
+        m.add(InlineKeyboardButton("💬 Telegram: @Welcome_to_my_profile",url="https://t.me/Welcome_to_my_profile"))
+        bot.send_message(call.message.chat.id,"👨‍⚕️ Ergashev Akbarjon\n💬 @Welcome_to_my_profile",reply_markup=m)
     elif d=="M2":
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("📞 Qongiroq qilish",url="tel:+998999449803"))
-        bot.send_message(msg.chat.id,"👨‍⚕️ Axmadaliyev Nurmuhammad\n📞 +998 99 944 98 03",reply_markup=m)
+        m.add(InlineKeyboardButton("💬 Telegram: @poultry_uz_vet",url="https://t.me/poultry_uz_vet"))
+        bot.send_message(call.message.chat.id,"👨‍⚕️ Axmadaliyev Nurmuhammad\n💬 @poultry_uz_vet",reply_markup=m)
     elif d=="M3":
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("📞 Qongiroq qilish",url="tel:+998932466069"))
-        bot.send_message(msg.chat.id,"👨‍⚕️ Xomitjonov Ulugbek\n📞 +998 93 246 60 69",reply_markup=m)
+        m.add(InlineKeyboardButton("💬 Telegram: @Obidjonovich27_11",url="https://t.me/Obidjonovich27_11"))
+        bot.send_message(call.message.chat.id,"👨‍⚕️ Xomitjonov Ulugbek\n💬 @Obidjonovich27_11",reply_markup=m)
     elif d=="SALES":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("👤 Otabek Duschanovich",callback_data="OTABEK"))
         bot.send_message(call.message.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
     elif d=="OTABEK":
         m=InlineKeyboardMarkup()
-        m.add(InlineKeyboardButton("📞 +998 90 932 97 71",url="tel:+998909329771"))
-        m.add(InlineKeyboardButton("📞 +998 95 390 39 36",url="tel:+998953903936"))
-        bot.send_message(msg.chat.id,"👤 Otabek Duschanovich\n📞 +998 90 932 97 71\n📞 +998 95 390 39 36",reply_markup=m)
+        m.add(InlineKeyboardButton("💬 Telegram: @Duschanovich",url="https://t.me/Duschanovich"))
+        bot.send_message(call.message.chat.id,"👤 Otabek Duschanovich\n💬 @Duschanovich",reply_markup=m)
     elif d=="VAK":
         bot.send_message(call.message.chat.id,"Vaktsinalar:",reply_markup=dm(vak))
     elif d=="ANT":
