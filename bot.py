@@ -54,7 +54,7 @@ def cb(call):
     elif d=="SALES":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("👤 Otabek Duschanovich",callback_data="OTABEK"))
-        bot.send_message(msg.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
+        bot.send_message(coll.message.chat.id,"🏪 Savdo bolimi:",reply_markup=m)
     elif d=="OTABEK":
         m=InlineKeyboardMarkup()
         m.add(InlineKeyboardButton("📞 +998 90 932 97 71 | Aloqdamiz!",url="tel:+998909329771"))
