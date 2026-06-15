@@ -12,8 +12,8 @@ def km():
     m.add(InlineKeyboardButton("💊 Antibiotiklar",callback_data="ANT"))
     m.add(InlineKeyboardButton("🌿 Vitaminlar",callback_data="VIT"))
     m.add(InlineKeyboardButton("🧴 Dezinfektantlar",callback_data="DEZ"))
-    m.add(InlineKeyboardButton("🩺 Mutaxassis",callback_data="HELP"))
-    m.add(InlineKeyboardButton("🏪 Savdo bolimi",callback_data="SALES"))
+    m.add(InlineKeyboardButton("Mutaxassis",callback_data="HELP"))
+    m.add(InlineKeyboardButton("Savdo bolimi",callback_data="SALES"))
     return m
 def dm(lst):
     m=InlineKeyboardMarkup()
